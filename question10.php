@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if (isset($_POST['supplements'])) {
+    $supplements = $_POST['supplements'];
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,45 +37,32 @@
 </head>
 <body>
 
-    <!--Start Integrate Header PHP -->
+ <!--Start Integrate Header PHP -->
 
-    <?php include "header.php"; ?>
+ <?php include "header.php"; ?>
 
-    <!--End Integrate Header PHP -->
+<!--End Integrate Header PHP -->
 
-    <div class="container">
-    <form id="health-form" action="question2.php" method="post">
-        <label for="health">1. How healthy are you physically?</label>
-        <input type="range" min="1" max="5" value="3" class="form-control" id="health" name="health">
-        <br>
+
+<div class="container">
+    <form action="question3.php" method="post">
+        <label for="supplements">2. Do you take nutritional supplements?</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
+            <label class="form-check-label" for="supplements-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="supplements" id="supplements-no" value="no">
+            <label class="form-check-label" for="supplements-no">No</label>
+        </div>
+        <br><br>
         <input type="submit" value="OK" class="btn btn-primary">
     </form>
 </div>
 
-
-<script>
-document.getElementById('health').addEventListener('change', validateHealth);
-
-function validateHealth() {
-    var health = document.getElementById('health').value;
-    if (health < 1 || health > 5) {
-        alert("Invalid health value. Please select a value between 1 and 5.");
-        return false;
-    }
-    return true;
-}
-
-document.getElementById('health-form').addEventListener('submit', function(event){
-    if (!validateHealth()) {
-        event.preventDefault();
-    }
-});
-</script>
-
-
-    <!--End PHP-->
+ <!--End PHP-->
     
-        <?php include "footer.php"; ?>
+ <?php include "footer.php"; ?>
 
 </body>
 </html>
