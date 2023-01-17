@@ -40,6 +40,8 @@ if (isset($_POST['supplements'])) {
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
+ <?php include "data-collector.php"; ?>
+
 
 <!--End Integrate Header PHP -->
 
@@ -56,6 +58,7 @@ if (isset($_POST['supplements'])) {
             <label class="form-check-label" for="supplements-no">No</label>
         </div>
         <br><br>
+        <input type="hidden" name="lastPageID" value="question2">
         <input type="submit" value="OK" class="btn btn-primary">
     </form>
 </div>

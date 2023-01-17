@@ -1,16 +1,31 @@
-/*<!--Start Footer-->*/
+ /*
+    .container {
+        font-size: 12px
+        font;
 
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #343434;
-    color: white;
-    margin-top: 0px;
-    position: fixed;
-    height: 60px;
-    bottom: 0;
-    width: 100%;
+    }
 
-}
+    .btn-group{
+        font-size: 10px;
+
+    }
+
+    /*<!--Start Footer-->*/
+
+    .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #343434;
+        color: white;
+        margin-top: 0px;
+        position: fixed;
+        height: 60px;
+        bottom: 0;
+        width: 100%;
+
+    }
+
+
+
 
 /*<!--End Footer-->*/

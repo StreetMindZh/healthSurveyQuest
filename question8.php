@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (isset($_POST['supplements'])) {
-    $supplements = $_POST['supplements'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +33,8 @@ if (isset($_POST['supplements'])) {
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
+ <?php include "data-collector.php"; ?>
+
 
 <!--End Integrate Header PHP -->
 
@@ -56,6 +51,7 @@ if (isset($_POST['supplements'])) {
             <label class="form-check-label" for="supplements-no">No</label>
         </div>
         <br><br>
+        <input type="hidden" name="lastPageID" value="question8">
         <input type="submit" value="OK" class="btn btn-primary">
     </form>
 </div>

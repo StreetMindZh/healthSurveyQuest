@@ -1,7 +1,7 @@
 <!--Start Footer-->        
-<div class="footer">
+<div class="footer fixed-bottom">
 
-(c) 2022 Developer StreetMindz.com "the pro art inc"         
+(c) 2023 Developer [A-Z] StreetMindz.com "the pro art inc"         
 
 </div>
 <!--End Footer-->

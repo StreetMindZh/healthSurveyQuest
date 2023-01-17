@@ -1,4 +1,8 @@
-
+<?php 
+session_start();
+//session related code
+session_destroy();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +45,8 @@
     <div class="container">
     <form id="health-form" action="question2.php" method="post">
         <label for="health">1. How healthy are you physically?</label>
-        <input type="range" min="1" max="5" value="3" class="form-control" id="health" name="health">
+        <input type="range" min="0" max="5" value="0" class="form-control" id="health" name="health">
+        <input type="hidden" name="lastPageID" value="question1">
         <br>
         <input type="submit" value="OK" class="btn btn-primary">
     </form>
