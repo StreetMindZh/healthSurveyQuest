@@ -42,7 +42,10 @@
 
 <div class="container">
     <form action="question3.php" method="post">
-        <label for="supplements">2. Do you take nutritional supplements?</label>
+    <div class="alert alert-primary" role="alert">
+    Question 6. On a typical day, how many of your meals or snacks contain carbohydrates?
+        </div>
+        
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
             <label class="form-check-label" for="supplements-yes">Yes</label>

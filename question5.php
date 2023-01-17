@@ -49,7 +49,10 @@ if (isset($_POST['supplements'])) {
 
 <div class="container">
     <form action="question5.php" method="post">
-        <label for="supplements">2. Do you take nutritional supplements?</label>
+    <div class="alert alert-primary" role="alert">
+    Question 5. Do you feel you do too little, just enough or way too much additional physical activity?
+        </div>
+        
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
             <label class="form-check-label" for="supplements-yes">Yes</label>

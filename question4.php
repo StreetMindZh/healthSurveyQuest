@@ -121,10 +121,10 @@
     </form>
 
 
-    <?php include "validation.js"; ?>
+  
     <!--End PHP-->
 
-<!--
+
     <script>
         function validateForm() {
     var checkboxes = document.getElementsByName("activity");
@@ -148,7 +148,7 @@
     return true;
   }
 </script>
--->
+
         
     <?php include "footer.php"; ?>
 
