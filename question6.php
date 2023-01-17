@@ -28,7 +28,8 @@
     <!--End CSS External-->
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
 
  <!--Start Integrate Header PHP -->
 

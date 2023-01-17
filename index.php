@@ -34,7 +34,8 @@ session_destroy();
     <!--End CSS External-->
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
 
     <!--Start Integrate Header PHP -->
 
@@ -43,33 +44,33 @@ session_destroy();
     <!--End Integrate Header PHP -->
 
     <div class="container">
-    <form id="health-form" action="question2.php" method="post">
-        <label for="health">1. How healthy are you physically?</label>
-        <input type="range" min="0" max="5" value="0" class="form-control" id="health" name="health">
-        <input type="hidden" name="lastPageID" value="question1">
-        <br>
-        <input type="submit" value="OK" class="btn btn-primary">
-    </form>
-</div>
+        <form id="health-form" action="question2.php" method="post">
+            <label for="health">1. How healthy are you physically?</label>
+            <input type="range" min="0" max="5" value="0" class="form-control" id="health" name="health">
+            <input type="hidden" name="lastPageID" value="question1">
+            <br>
+            <input type="submit" value="OK" class="btn btn-primary">
+        </form>
+    </div>
 
 
 <script>
-document.getElementById('health').addEventListener('change', validateHealth);
+    document.getElementById('health').addEventListener('change', validateHealth);
 
-function validateHealth() {
-    var health = document.getElementById('health').value;
-    if (health < 1 || health > 5) {
-        alert("Invalid health value. Please select a value between 1 and 5.");
-        return false;
+    function validateHealth() {
+        var health = document.getElementById('health').value;
+        if (health < 1 || health > 5) {
+            alert("Invalid health value. Please select a value between 1 and 5.");
+            return false;
+        }
+        return true;
     }
-    return true;
-}
 
-document.getElementById('health-form').addEventListener('submit', function(event){
-    if (!validateHealth()) {
-        event.preventDefault();
-    }
-});
+    document.getElementById('health-form').addEventListener('submit', function(event){
+        if (!validateHealth()) {
+            event.preventDefault();
+        }
+    });
 </script>
 
 

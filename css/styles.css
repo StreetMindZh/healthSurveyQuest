@@ -1,31 +1,44 @@
- /*
+  
     .container {
-        font-size: 12px
-        font;
+        font-size: 12px;
+        width: 100%;
+        padding-bottom: 100px;
+        height: 100%;
+
 
     }
 
-    .btn-group{
-        font-size: 10px;
 
-    }
-
-    /*<!--Start Footer-->*/
-
-    .footer {
-        padding: 20px;
-        text-align: center;
-        background-color: #343434;
-        color: white;
-        margin-top: 0px;
-        position: fixed;
-        height: 60px;
-        bottom: 0;
+    .form-check{
+        padding-right: 0px;
+        padding-left: 0px;
         width: 100%;
 
+
+    }
+
+    .btn-primary{
+        font-size: 10px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        --bs-btn-bg: #ca0aa0;
+
     }
 
 
+    .footer {
+        
+        background-color: #343434;
+        color: white;
+        text-align: center;
 
+    }
 
-/*<!--End Footer-->*/
+    form{
+
+        padding-bottom: 50px;
+    }
+
+    
+

@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (isset($_POST['supplements'])) {
-    $supplements = $_POST['supplements'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +28,7 @@ if (isset($_POST['supplements'])) {
     <!--End CSS External-->
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
  <!--Start Integrate Header PHP -->
 
@@ -47,7 +40,7 @@ if (isset($_POST['supplements'])) {
 
 
 <div class="container">
-    <form action="question3.php" method="post">
+    <form action="question3.php" method="post" onsubmit="return validateForm()">
         <label for="supplements">2. Do you take nutritional supplements?</label>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
@@ -64,6 +57,23 @@ if (isset($_POST['supplements'])) {
 </div>
 
  <!--End PHP-->
+
+ <script>
+    function validateForm() {
+        var radios = document.getElementsByName("supplements");
+        var formValid = false;
+
+        var i = 0;
+        while (!formValid && i < radios.length) {
+            if (radios[i].checked) formValid = true;
+            i++;        
+        }
+
+        if (!formValid) alert("Please select one checkbox to continue.");
+        return formValid;
+    }
+</script>
+
     
  <?php include "footer.php"; ?>
 
