@@ -1,17 +1,10 @@
-<?php
-session_start();
-if (isset($_POST['supplements'])) {
-    $supplements = $_POST['supplements'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Physical Activity Survey Question 2</title>
 
     <!--Start Google Fonts Ubuntu Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,18 +28,23 @@ if (isset($_POST['supplements'])) {
     <!--End CSS External-->
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
+ <?php include "data-collector.php"; ?>
+
 
 <!--End Integrate Header PHP -->
 
 
 <div class="container">
-    <form action="question3.php" method="post">
-        <label for="supplements">2. Do you take nutritional supplements?</label>
+    <form action="question3.php" method="post" onsubmit="return validateForm()">
+    <div class="alert alert-primary" role="alert">
+    Question 2. Do you take nutritional supplements?
+        </div>
+        
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
             <label class="form-check-label" for="supplements-yes">Yes</label>
@@ -56,11 +54,29 @@ if (isset($_POST['supplements'])) {
             <label class="form-check-label" for="supplements-no">No</label>
         </div>
         <br><br>
+        <input type="hidden" name="lastPageID" value="question2">
         <input type="submit" value="OK" class="btn btn-primary">
     </form>
 </div>
 
  <!--End PHP-->
+
+ <script>
+    function validateForm() {
+        var radios = document.getElementsByName("supplements");
+        var formValid = false;
+
+        var i = 0;
+        while (!formValid && i < radios.length) {
+            if (radios[i].checked) formValid = true;
+            i++;        
+        }
+
+        if (!formValid) alert("Please select one checkbox to continue.");
+        return formValid;
+    }
+</script>
+
     
  <?php include "footer.php"; ?>
 

@@ -10,7 +10,7 @@ if (isset($_POST['activity'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Physical Activity Survey Question 3</title>
 
     <!--Start Google Fonts Ubuntu Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,19 +34,26 @@ if (isset($_POST['activity'])) {
     <!--End CSS External-->
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
 
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
+ <?php include "data-collector.php"; ?>
+
 
 <!--End Integrate Header PHP -->
 
 <div class="container">
     <form id="activity-form" action="question4.php" method="post">
-        <label for="activity">3. How important is physical activity to you?</label>
+        
+        <div class="alert alert-primary" role="alert">
+        3. How important is physical activity to you?
+        </div>
         <input type="range" min="0" max="5" value="0" class="form-control" id="activity" name="activity">
         <br>
+        <input type="hidden" name="lastPageID" value="question3">
         <input type="submit" value="OK" class="btn btn-primary">
         <input type="reset" value="Reset" class="btn btn-secondary">
 
@@ -54,25 +61,25 @@ if (isset($_POST['activity'])) {
 </div>
 
 <script>
-document.getElementById('activity').addEventListener('change', validateActivity);
+    document.getElementById('activity').addEventListener('change', validateActivity);
 
-function validateActivity() {
-    var activity = document.getElementById('activity').value;
-    if (activity < 1 || activity > 5) {
-        alert("Invalid activity value. Please select a value between 1 and 5.");
-        return false;
-    } else if (activity == 0) {
-        alert("Please select a value different from the default one");
-        return false;
+    function validateActivity() {
+        var activity = document.getElementById('activity').value;
+        if (activity < 1 || activity > 5) {
+            alert("Invalid activity value. Please select a value between 1 and 5.");
+            return false;
+        } else if (activity == 0) {
+            alert("Please select a value different from the default one");
+            return false;
+        }
+        return true;
     }
-    return true;
-}
 
-document.getElementById('activity-form').addEventListener('submit', function(event){
-    if (!validateActivity()) {
-        event.preventDefault();
-    }
-});
+    document.getElementById('activity-form').addEventListener('submit', function(event){
+        if (!validateActivity()) {
+            event.preventDefault();
+        }
+    });
 </script>
 
 <?php include "footer.php"; ?>

@@ -1,16 +1,51 @@
-/*<!--Start Footer-->*/
+    /* Google Fonts Input */
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #343434;
-    color: white;
-    margin-top: 0px;
-    position: fixed;
-    height: 60px;
-    bottom: 0;
-    width: 100%;
+    /* This is a single-line comment */
 
-}
+    .body{
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .container {
+        font-size: 12px;
+        width: 100%;
+        padding-bottom: 100px;
+        height: 100%;
 
-/*<!--End Footer-->*/
+
+    }
+
+
+    .form-check{
+        padding-right: 0px;
+        padding-left: 0px;
+        width: 100%;
+
+
+    }
+
+    .btn-primary{
+        font-size: 10px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        --bs-btn-bg: #ca0aa0;
+
+    }
+
+
+    .footer {
+        
+        background-color: #343434;
+        color: white;
+        text-align: center;
+
+    }
+
+    form{
+
+        padding-bottom: 50px;
+    }
+
+    
+/* This is a single-line comment */
