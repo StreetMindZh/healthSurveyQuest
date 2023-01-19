@@ -1,3 +1,5 @@
+<?php include "data-collector.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,8 +36,6 @@
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
-
 
 <!--End Integrate Header PHP -->
 
@@ -44,7 +44,7 @@
     <div class="container">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
             <p>Question 10.</p><br>On a typical day, how many of your meals are microwaved or prepared?</h2>
-        <form id="health-form" action="question10.php" method="post" onsubmit="return validateActivity()">
+        <form id="health-form" action="survey.php" method="post" onsubmit="return validateActivity()">
             <input type="number" class="form-control" id="activity" name="activity"><br>
             <input type="hidden" name="lastPageID" value="question10">
             <input type="submit" value="OK" class="btn btn-primary">

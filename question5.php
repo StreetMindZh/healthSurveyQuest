@@ -1,9 +1,4 @@
-<?php
-session_start();
-if (isset($_POST['supplements'])) {
-    $supplements = $_POST['supplements'];
-}
-?>
+<?php include "data-collector.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,13 +32,8 @@ if (isset($_POST['supplements'])) {
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-
  <!--Start Integrate Header PHP -->
-
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
-
-
 <!--End Integrate Header PHP -->
 
     <section class="page-section" id="quest">
@@ -53,7 +43,28 @@ if (isset($_POST['supplements'])) {
 <!-- Icon Divider-->
                     
                 <form id="health-form" action="question6.php" method="post" onsubmit="return validateActivity()">
-                    <input type="range" min="0" max="5" value="0" class="form-control" id="activity" name="activity"><br>
+                    
+                    <input type="range" class="form-range" id="activity" name="activity" min="0" max="5" value="0" >
+                        <div class="row" style="color:white;" >
+                            <div class="col border bg-danger">
+                                not selected
+                            </div>
+                            <div class="col border bg-secondary">
+                                1
+                            </div>
+                            <div class="col border bg-primary">
+                                2
+                            </div>
+                            <div class="col border bg-info">
+                                3
+                            </div>
+                            <div class="col border bg-warning">
+                                4
+                            </div>
+                            <div class="col border bg-dark">
+                                5
+                            </div>
+                        </div>
                     <input type="hidden" name="lastPageID" value="question3">
                     <input type="submit" value="OK" class="btn btn-primary">
                     <a href="question4.php" class="btn btn-secondary">Back</a>

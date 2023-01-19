@@ -72,7 +72,51 @@ session_destroy();
                         Start the FitQuest
                     </a>
                 </div>
+
+                <!-- About Us Team Items-->
+                <div class="row justify-content-center">
+                    <!-- About Us Team Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#teamModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/zlatko_jankovski.png" alt="Picture of Zlatko Jankovski Owener of HotelFit AG" />
+                        </div>
+                    </div>
             </div>
+            <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="teamModal1" tabindex="-1" aria-labelledby="teamModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Zlatko Jankovski Jr.</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/zlatko_jankovski.png" alt="Picture of Zlatko Jankovski Owener of HotelFit AG" />
+                                    <!-- Team Modal - Text-->
+                                    <p class="teamStory">"Zlatko Jankovski Junior leads the business for over 10 years now. As a breakdancer and sports enthusiast, Zlatko, in the third generation after his grandfather Michael and his father Ares, is running the Hotel Fit. Through the generations, knowledge and attitude of the past has been passed down to offer a holistic offer for health-conscious people, coming at the highest level of innovation."</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </section>
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="services">
@@ -113,34 +157,7 @@ session_destroy();
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/spa-wellness.png" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -170,9 +187,7 @@ session_destroy();
             </div>
         </section>
        
-        <!-- Start Footer Section-->
-        <?php include "footer.php"; ?>
-        <!-- End Footer Section-->
+        
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
@@ -258,103 +273,7 @@ session_destroy();
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/spa-wellness.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">LOur spa facilities span over 5000 square meters, making it one of the most unique in Europe. Our goal is to immerse you in different worlds and that's why we have themed our landscapes accordingly. For example, when you use our Hamam, you will be completely immersed in an oriental world. The same goes for the Roman bath world. Whether you come with your family or as a couple, we have thought of everything.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">Our spa facilities span over 5000 square meters, making it one of the most unique in Europe. Our goal is to immerse you in different worlds and that's why we have themed our landscapes accordingly. For example, when you use our Hamam, you will be completely immersed in an oriental world. The same goes for the Roman bath world. Whether you come with your family or as a couple, we have thought of everything.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -375,5 +294,9 @@ session_destroy();
         <!-- * * Activate your form at https://streetminidz.com * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         
+    <!-- Start Footer Section-->
+    <?php include "footer.php"; ?>
+    <!-- End Footer Section-->
+
     </body>
 </html>

@@ -34,9 +34,9 @@ session_destroy();
     <!--End CSS External-->
 
 </head>
-<body id="page-top d-flex flex-column min-vh-100">
+<body id="page-top" class="d-flex flex-column min-vh-100">
 
-    <!--Start Integrate Header PHP -->
+<!--Start Integrate Header PHP -->
 
     <?php include "header.php"; ?>
 
@@ -49,7 +49,29 @@ session_destroy();
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Question 1. How healthy are you physically?</h2>
     <!-- Form Type Range-->
         <form id="health-form" action="question2.php" method="post" onsubmit="return validateForm()">
-            <input type="range" min="0" max="5" value="0" class="form-control" id="health" name="health">
+        <label for="customRange1" class="form-label">Select an area to show how healthy you feel</label>
+            <input type="range" class="form-range" id="health" name="health" min="0" max="5" value="0" >
+            
+            <div class="row" style="color:white;" >
+                    <div class="col border bg-danger">
+                        not selected
+                    </div>
+                    <div class="col border bg-secondary">
+                        1
+                    </div>
+                    <div class="col border bg-primary">
+                        2
+                    </div>
+                    <div class="col border bg-info">
+                        3
+                    </div>
+                    <div class="col border bg-warning">
+                        4
+                    </div>
+                    <div class="col border bg-dark">
+                        5
+                    </div>
+                </div>
             <input type="hidden" name="lastPageID" value="question1"><br>
             <input type="submit" value="OK" class="btn btn-primary">
         </form>
@@ -78,9 +100,10 @@ session_destroy();
 </script>
 
 
-    <!--End PHP-->
-    
-        <?php include "footer.php"; ?>
+<!--Start Integrate Footer PHP -->
+     <?php include "footer.php"; ?>
+<!--End Integrate Footer PHP -->
+
 
 </body>
 </html>
