@@ -8,7 +8,6 @@
 //Hilfswerkzeuge laden
     include 'tools.php';
 
-
     if (isset($_POST["lastPageID"])) {
 // hole den Nammen der letzten Seite aus $_POST "lastPageID"
     $lastPageID = $_POST["lastPageID"];

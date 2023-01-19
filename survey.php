@@ -1,21 +1,13 @@
 <?php
-session_start();
+include "data-collector.php";
 
-include 'tools.php';
+echo "test below --------------------------- <br/>";
+
+print_r($_SESSION["question2"]);
 
 
-if (isset($_POST["lastPageID"])) {
-// hole den Nammen der letzten Seite aus $_POST "lastPageID"
-$lastPageID = $_POST["lastPageID"];
 
-// Speichere alle Daten des letzten Posts mit den Namen $lastPageID in der Session
-$_SESSION["$lastPageID"] = $_POST;
 
-}
-
-//DEVONLY: GIB DIE AKTUELLE $_SESSION in die Seite aus.
-
-prettyPrint($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -62,21 +54,9 @@ prettyPrint($_SESSION);
 <!-- Icon Divider-->
                     
 <?php
-$activityCounts = array(1 => 0, 2 => 0, 3 => 0);
-foreach ($sessionArray as $question) {
-    $activityCounts[$question['activity']]++;
-}
+$test = $_SESSION["question3"]["activity"];
 
-$mostCommonActivity = 0;
-$mostCommonActivityCount = 0;
-foreach ($activityCounts as $activity => $count) {
-    if ($count > $mostCommonActivityCount) {
-        $mostCommonActivity = $activity;
-        $mostCommonActivityCount = $count;
-    }
-}
-
-echo "The most common activity level selected by the user is " . $mostCommonActivity;
+echo "<h1> $test </h1>"
 
 ?>
         </div>
