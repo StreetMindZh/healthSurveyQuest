@@ -34,7 +34,7 @@ if (isset($_POST['activity'])) {
     <!--End CSS External-->
 
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body id=" page-top" class="d-flex flex-column min-vh-100">
 
 
  <!--Start Integrate Header PHP -->
@@ -45,19 +45,25 @@ if (isset($_POST['activity'])) {
 
 <!--End Integrate Header PHP -->
 
-<div class="container">
-    <form id="activity-form" action="question4.php" method="post">
-        
-        <div class="alert alert-primary" role="alert">
-        3. How important is physical activity to you?
+    <section class="page-section" id="quest">
+        <div class="container">
+    <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Question 3. How important is physical activity to you?</h2>
+                    <!-- Icon Divider-->
+                    
+            <form id="health-form" action="question4.php" method="post" onsubmit="return validateForm()">
+            
+                
+                <input type="range" min="0" max="5" value="0" class="form-control" id="activity" name="activity">
+                <br>
+                <input type="hidden" name="lastPageID" value="question3">
+                <input type="submit" value="OK" class="btn btn-primary">
+                <a href="question2.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+            </form>
         </div>
-        <input type="range" min="0" max="5" value="0" class="form-control" id="activity" name="activity">
-        <br>
-        <input type="hidden" name="lastPageID" value="question3">
-        <input type="submit" value="OK" class="btn btn-primary">
-        <input type="reset" value="Reset" class="btn btn-secondary">
+    </section>
 
-    </form>
 </div>
 
 <script>

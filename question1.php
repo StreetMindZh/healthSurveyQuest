@@ -1,5 +1,7 @@
 <?php 
 session_start();
+//session related code
+session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@ session_start();
  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+    <script src="js/scripts.js"></script>
     <!--End Bootstrap CDN CSS and JavaScript Link-->
 
      <!--Start CSS External-->
@@ -32,27 +34,28 @@ session_start();
     <!--End CSS External-->
 
 </head>
-<body class="d-flex flex-column min-vh-100">
-
+<body id="page-top d-flex flex-column min-vh-100">
 
     <!--Start Integrate Header PHP -->
 
     <?php include "header.php"; ?>
 
-    <!--End Integrate Header PHP -->
+<!--End Integrate Header PHP -->
 
+<!-- Question 1 Section-->
+<section class="page-section" id="quest">
     <div class="container">
-        <form id="health-form" action="question2.php" method="post">
-        <div class="alert alert-primary" role="alert">
-        Question 1. How healthy are you physically?
-        </div>
-            
+<!-- Contact Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Question 1. How healthy are you physically?</h2>
+    <!-- Form Type Range-->
+        <form id="health-form" action="question2.php" method="post" onsubmit="return validateForm()">
             <input type="range" min="0" max="5" value="0" class="form-control" id="health" name="health">
-            <input type="hidden" name="lastPageID" value="question1">
-            <br>
+            <input type="hidden" name="lastPageID" value="question1"><br>
             <input type="submit" value="OK" class="btn btn-primary">
         </form>
     </div>
+</section>
+
 
 
 <script>

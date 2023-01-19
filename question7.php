@@ -39,26 +39,34 @@
 
 <!--End Integrate Header PHP -->
 
+<section class="page-section" id="quest">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+            <p>Question 7.</p><br>On a typical day, how many of your meals or snacks contain protein?</h2>
+        <form id="health-form" action="question8.php" method="post" onsubmit="return validateActivity()">
+            <input type="number" class="form-control" id="activity" name="activity"><br>
+            <input type="hidden" name="lastPageID" value="question7">
+            <input type="submit" value="OK" class="btn btn-primary">
+            <a href="question6.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+        </form>
+    </div>
+</section>
 
-<div class="container">
-    <form action="question3.php" method="post">
-    <div class="alert alert-primary" role="alert">
-    Question 7. On a typical day, how many of your meals or snacks contain protein?
-        </div>
-        <label for="supplements">7 On a typical day, how many of your meals or snacks contain protein?</label>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
-            <label class="form-check-label" for="supplements-yes">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-no" value="no">
-            <label class="form-check-label" for="supplements-no">No</label>
-        </div>
-        <br><br>
-        <input type="hidden" name="lastPageID" value="question7">
-        <input type="submit" value="OK" class="btn btn-primary">
-    </form>
-</div>
+
+
+<script>
+    function validateActivity() {
+    var activity = document.getElementById("activity").value;
+    if (activity === "") {
+        alert("Please give us an answer.");
+        return false;
+    }
+    return true;
+}
+</script>
+
+
 
  <!--End PHP-->
     

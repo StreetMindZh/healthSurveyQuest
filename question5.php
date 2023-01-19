@@ -46,26 +46,45 @@ if (isset($_POST['supplements'])) {
 
 <!--End Integrate Header PHP -->
 
+    <section class="page-section" id="quest">
+        <div class="container">
+<!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><p>Question 5.</p><br> Do you feel you do too little, just enough or way too much additional physical activity?</h2>
+<!-- Icon Divider-->
+                    
+                <form id="health-form" action="question6.php" method="post" onsubmit="return validateActivity()">
+                    <input type="range" min="0" max="5" value="0" class="form-control" id="activity" name="activity"><br>
+                    <input type="hidden" name="lastPageID" value="question3">
+                    <input type="submit" value="OK" class="btn btn-primary">
+                    <a href="question4.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+                </form>
+        </div>
+    </section>
 
-<div class="container">
-    <form action="question5.php" method="post">
-    <div class="alert alert-primary" role="alert">
-    Question 5. Do you feel you do too little, just enough or way too much additional physical activity?
-        </div>
-        
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
-            <label class="form-check-label" for="supplements-yes">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-no" value="no">
-            <label class="form-check-label" for="supplements-no">No</label>
-        </div>
-        <br><br>
-        <input type="hidden" name="lastPageID" value="question5">
-        <input type="submit" value="OK" class="btn btn-primary">
-    </form>
-</div>
+    <script>
+    
+    document.getElementById('activity').addEventListener('change', validateActivity);
+
+function validateActivity() {
+    var activity = document.getElementById('activity').value;
+    if (activity < 1 || activity > 5) {
+        alert("Invalid activity value. Please select a value between 1 and 5.");
+        return false;
+    } else if (activity == 0) {
+        alert("Please select a value different from the default one");
+        return false;
+    }
+    return true;
+}
+
+
+    document.getElementById('activity-form').addEventListener('submit', function(event){
+        if (!validateActivity()) {
+            event.preventDefault();
+        }
+    });
+</script>
 
  <!--End PHP-->
     
