@@ -45,7 +45,7 @@
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
             <p>Question 10.</p><br>On a typical day, how many of your meals are microwaved or prepared?</h2>
         <form id="health-form" action="survey.php" method="post" onsubmit="return validateActivity()">
-            <input type="number" class="form-control" id="activity" name="activity"><br>
+            <input type="number" class="form-control" id="activity" name="activity" min="1" max="10"><br>
             <input type="hidden" name="lastPageID" value="question10">
             <input type="submit" value="OK" class="btn btn-primary">
             <a href="question9.php" class="btn btn-secondary">Back</a>

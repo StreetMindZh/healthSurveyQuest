@@ -64,6 +64,18 @@
         </form>
             </div>
         </section>
+        
+
+        <section class="page-section" id="quest">
+            <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">your decision on Question 1 was<?php
+        $q1 = $_SESSION["question1"]["health"];
+        echo "<h2> $q1 </h2>"
+        ?> on a scale of 1-5</h2>
+            </div>
+        </section>
+        
+        
 
 
  <!--End PHP-->

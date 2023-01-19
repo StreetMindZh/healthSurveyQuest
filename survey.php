@@ -53,12 +53,14 @@ print_r($_SESSION["question2"]);
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><p>Thank You</p><br>for your participation, here you will find your evaluation. If you need more information or want to make a booking for your next vacation directly. Use our contact form and we will get in touch with you.</h2>
 <!-- Icon Divider-->
                     
-<?php
-$test = $_SESSION["question3"]["activity"];
-
-echo "<h1> $test </h1>"
-
-?>
+<section class="page-section" id="quest">
+            <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">your decision on Question 1 was<?php
+        $q1 = $_SESSION["question1"]["health"];
+        echo "<h2> $q1 </h2>"
+        ?> on a scale of 1-5</h2>
+            </div>
+        </section>
         </div>
     </section>
 
