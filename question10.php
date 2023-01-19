@@ -1,3 +1,5 @@
+<?php include "data-collector.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,31 +36,36 @@
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
-
 
 <!--End Integrate Header PHP -->
 
 
-<div class="container">
-    <form action="question3.php" method="post">
-    <div class="alert alert-primary" role="alert">
-    Question 10. On a typical day, how many of your meals are microwaved or prepared?
-        </div>
-       
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
-            <label class="form-check-label" for="supplements-yes">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-no" value="no">
-            <label class="form-check-label" for="supplements-no">No</label>
-        </div>
-        <br><br>
-        <input type="hidden" name="lastPageID" value="question10">
-        <input type="submit" value="OK" class="btn btn-primary">
-    </form>
-</div>
+<section class="page-section" id="quest">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+            <p>Question 10.</p><br>On a typical day, how many of your meals are microwaved or prepared?</h2>
+        <form id="health-form" action="survey.php" method="post" onsubmit="return validateActivity()">
+            <input type="number" class="form-control" id="activity" name="activity"><br>
+            <input type="hidden" name="lastPageID" value="question10">
+            <input type="submit" value="OK" class="btn btn-primary">
+            <a href="question9.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+        </form>
+    </div>
+</section>
+
+
+
+<script>
+    function validateActivity() {
+    var activity = document.getElementById("activity").value;
+    if (activity === "") {
+        alert("Please give us an answer.");
+        return false;
+    }
+    return true;
+}
+</script>
 
  <!--End PHP-->
     

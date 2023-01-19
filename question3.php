@@ -1,9 +1,5 @@
-<?php
-session_start();
-if (isset($_POST['activity'])) {
-    $_SESSION['activity'] = $_POST['activity'];
-}
-?>
+<?php include "data-collector.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,30 +30,54 @@ if (isset($_POST['activity'])) {
     <!--End CSS External-->
 
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body id=" page-top" class="d-flex flex-column min-vh-100">
 
 
  <!--Start Integrate Header PHP -->
-
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
-
-
 <!--End Integrate Header PHP -->
 
-<div class="container">
-    <form id="activity-form" action="question4.php" method="post">
-        
-        <div class="alert alert-primary" role="alert">
-        3. How important is physical activity to you?
+    <section class="page-section" id="quest">
+        <div class="container">
+    <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Question 3. How important is physical activity to you?</h2>
+                    <!-- Icon Divider-->
+                    
+            <form id="health-form" action="question4.php" method="post" onsubmit="return validateForm()">
+            
+                
+            <label for="customRange1" class="form-label">Select an area between 1 and 5 to show how important physical activity is to you</label>
+            <input type="range" class="form-range" id="activity" name="activity" min="0" max="5" value="0" >
+            
+                <div class="row" style="color:white;" >
+                    <div class="col border bg-danger">
+                        not selected
+                    </div>
+                    <div class="col border bg-secondary">
+                        1
+                    </div>
+                    <div class="col border bg-primary">
+                        2
+                    </div>
+                    <div class="col border bg-info">
+                        3
+                    </div>
+                    <div class="col border bg-warning">
+                        4
+                    </div>
+                    <div class="col border bg-dark">
+                        5
+                    </div>
+                </div>
+                <br>
+                <input type="hidden" name="lastPageID" value="question3">
+                <input type="submit" value="OK" class="btn btn-primary">
+                <a href="question2.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+            </form>
         </div>
-        <input type="range" min="0" max="5" value="0" class="form-control" id="activity" name="activity">
-        <br>
-        <input type="hidden" name="lastPageID" value="question3">
-        <input type="submit" value="OK" class="btn btn-primary">
-        <input type="reset" value="Reset" class="btn btn-secondary">
+    </section>
 
-    </form>
 </div>
 
 <script>

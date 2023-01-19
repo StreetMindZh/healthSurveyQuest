@@ -1,3 +1,5 @@
+<?php include "data-collector.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,19 +35,19 @@
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
 
 
 <!--End Integrate Header PHP -->
-
-
-<div class="container">
-    <form action="question3.php" method="post" onsubmit="return validateForm()">
-    <div class="alert alert-primary" role="alert">
-    Question 2. Do you take nutritional supplements?
-        </div>
-        
-        <div class="form-check form-check-inline">
+<!-- Question 2 Section-->
+        <section class="page-section" id="quest">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Question 2. Do you take nutritional supplements?</h2>
+                
+               
+                <form id="health-form" action="question3.php" method="post" onsubmit="return validateForm()">
+            
+                <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
             <label class="form-check-label" for="supplements-yes">Yes</label>
         </div>
@@ -55,9 +57,14 @@
         </div>
         <br><br>
         <input type="hidden" name="lastPageID" value="question2">
-        <input type="submit" value="OK" class="btn btn-primary">
-    </form>
-</div>
+            <br>
+            <input type="submit" value="OK" class="btn btn-primary">
+            <a href="question1.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+        </form>
+            </div>
+        </section>
+
 
  <!--End PHP-->
 

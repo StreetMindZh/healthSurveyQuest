@@ -1,38 +1,53 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">StreetMindz Healt Test</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- Navigation
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+            <a class="navbar-brand" href="#">
+            <img src="img/logo_hotelfit.png" width="140" height="40" alt="">
+            </a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-      <div class="collapse navbar-collapse" id="navbarsExample04">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Welcome</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutus.php">About Us</a>
-          </li>
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Quest</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown04">
-              <li><a class="dropdown-item" href="index.php">Question 1</a></li>
-              <li><a class="dropdown-item" href="question2.php">Question 2</a></li>
-              <li><a class="dropdown-item" href="question3.php">Question 3</a></li>
-              <li><a class="dropdown-item" href="question4.php">Question 4</a></li>
-              <li><a class="dropdown-item" href="question5.php">Question 5</a></li>
-              <li><a class="dropdown-item" href="question6.php">Question 6</a></li>
-              <li><a class="dropdown-item" href="question7.php">Question 7</a></li>
-              <li><a class="dropdown-item" href="question8.php">Question 8</a></li>
-              <li><a class="dropdown-item" href="question9.php">Question 9</a></li>
-              <li><a class="dropdown-item" href="question10.php">Question 10</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">"we give a care about you"</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+-->
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3">
+<div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+            <img src="img/logo_hotelfit_white.png" width="140" height="40" alt="">
+            </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ 
+  <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ms-auto ">
+      <li class="nav-item">
+        <a class="nav-link mx-2 active" aria-current="page" href="index.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2" href="index.php#about">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2" href="question1.php">FitQuest</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2" href="index.php#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2" href="index.php#contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
