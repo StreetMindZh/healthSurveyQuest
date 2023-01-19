@@ -1,9 +1,4 @@
-<?php
-session_start();
-if (isset($_POST['supplements'])) {
-    $supplements = $_POST['supplements'];
-}
-?>
+<?php include "data-collector.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,35 +32,70 @@ if (isset($_POST['supplements'])) {
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-
  <!--Start Integrate Header PHP -->
-
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
-
-
 <!--End Integrate Header PHP -->
 
+    <section class="page-section" id="quest">
+        <div class="container">
+<!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><p>Question 5.</p><br> Do you feel you do too little, just enough or way too much additional physical activity?</h2>
+<!-- Icon Divider-->
+                    
+                <form id="health-form" action="question6.php" method="post" onsubmit="return validateActivity()">
+                    
+                    <input type="range" class="form-range" id="activity" name="activity" min="0" max="5" value="0" >
+                        <div class="row" style="color:white;" >
+                            <div class="col border bg-danger">
+                                not selected
+                            </div>
+                            <div class="col border bg-secondary">
+                                1
+                            </div>
+                            <div class="col border bg-primary">
+                                2
+                            </div>
+                            <div class="col border bg-info">
+                                3
+                            </div>
+                            <div class="col border bg-warning">
+                                4
+                            </div>
+                            <div class="col border bg-dark">
+                                5
+                            </div>
+                        </div>
+                    <input type="hidden" name="lastPageID" value="question5">
+                    <input type="submit" value="OK" class="btn btn-primary">
+                    <a href="question4.php" class="btn btn-secondary">Back</a>
+            <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
+                </form>
+        </div>
+    </section>
 
-<div class="container">
-    <form action="question5.php" method="post">
-    <div class="alert alert-primary" role="alert">
-    Question 5. Do you feel you do too little, just enough or way too much additional physical activity?
-        </div>
-        
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-yes" value="yes">
-            <label class="form-check-label" for="supplements-yes">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="supplements" id="supplements-no" value="no">
-            <label class="form-check-label" for="supplements-no">No</label>
-        </div>
-        <br><br>
-        <input type="hidden" name="lastPageID" value="question5">
-        <input type="submit" value="OK" class="btn btn-primary">
-    </form>
-</div>
+    <script>
+    
+    document.getElementById('activity').addEventListener('change', validateActivity);
+
+function validateActivity() {
+    var activity = document.getElementById('activity').value;
+    if (activity < 1 || activity > 5) {
+        alert("Invalid activity value. Please select a value between 1 and 5.");
+        return false;
+    } else if (activity == 0) {
+        alert("Please select a value different from the default one");
+        return false;
+    }
+    return true;
+}
+
+
+    document.getElementById('activity-form').addEventListener('submit', function(event){
+        if (!validateActivity()) {
+            event.preventDefault();
+        }
+    });
+</script>
 
  <!--End PHP-->
     
