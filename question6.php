@@ -1,3 +1,5 @@
+<?php include "data-collector.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +36,7 @@
  <!--Start Integrate Header PHP -->
 
  <?php include "header.php"; ?>
- <?php include "data-collector.php"; ?>
+
 
 
 <!--End Integrate Header PHP -->

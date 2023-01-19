@@ -108,6 +108,7 @@
         
           <div>
             <button type="submit" class="ok-btn btn btn-primary">OK</button>
+            <input type="hidden" name="lastPageID" value="question4">
             <a href="question3.php" class="btn btn-secondary">Back</a>
             <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
           </div>
@@ -117,6 +118,7 @@
                 
       </div>
     </section>
+
 
     <!--End PHP-->
 

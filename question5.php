@@ -65,7 +65,7 @@
                                 5
                             </div>
                         </div>
-                    <input type="hidden" name="lastPageID" value="question3">
+                    <input type="hidden" name="lastPageID" value="question5">
                     <input type="submit" value="OK" class="btn btn-primary">
                     <a href="question4.php" class="btn btn-secondary">Back</a>
             <input type="reset" value="Reset FitQuest" class="btn btn-secondary" onclick="window.location.href='question1.php'">
